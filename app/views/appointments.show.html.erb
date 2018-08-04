@@ -2,3 +2,7 @@
 
 <% @appointment.each do |app| %>
   <li><%= app.appointment_datetime.shrftime() %>
+    <%= app.patient.name %>
+    <%= app.doctor.name %>
+  </li>
+<% end %>    
