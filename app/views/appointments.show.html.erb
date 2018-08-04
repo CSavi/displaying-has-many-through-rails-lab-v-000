@@ -1,7 +1,7 @@
 <h1>Appointment</h1>
 
 <h2><%= @appointment.appointment_datetime.shrftime("%B %d, %Y at %H:%M") %></h2>
-<li><%= @appointment.patient.name %></li>
-<li><%= @appointment.doctor.name %><li>
+<li><%= link_to @appointment.patient.name, patient_path(@appointment.patient.name) %></li>
+<li><%= link_to @appointment.doctor.name, doctor_path(@appointment.doctor.name) %><li>
 
 <% end %>
