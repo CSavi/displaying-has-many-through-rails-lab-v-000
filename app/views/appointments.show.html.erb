@@ -1,8 +1,8 @@
 <h1>Appointment</h1>
 
 <% @appointment.each do |app| %>
-  <li><%= app.appointment_datetime.shrftime() %>
+  <li><%= app.appointment_datetime.shrftime("%B %d, %Y at %H:%M") %>
     <%= app.patient.name %>
     <%= app.doctor.name %>
   </li>
-<% end %>    
+<% end %>
