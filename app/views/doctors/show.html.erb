@@ -3,4 +3,5 @@
 <h2>Appointments: </h2>
 
   <% @doctor.appointments.each do |appointment| %>
-  <%= appointment.appointment_date
+  <%= appointment.appointment_datetime
+  <%= link_to appointment.patient.name, patient_url(appointment) %>
